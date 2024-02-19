@@ -2,6 +2,7 @@ package helloworld
 
 import "fmt"
 
+// Create a constant name and prefix for each language
 const (
 	spanish = "Spanish"
 	french  = "French"
@@ -14,6 +15,7 @@ const (
 	englishHelloPrefix = "Hello, "
 )
 
+// Hello returns a greeting in the specified language
 func Hello(name, language string) string {
 	if name == "" {
 		name = "world"
@@ -22,6 +24,7 @@ func Hello(name, language string) string {
 	return prefix + name
 }
 
+// greetingPrefix returns the appropriate prefix for the specified language
 func greetingPrefix(language string) (prefix string) {
 	switch language {
 	case "Spanish":
@@ -36,6 +39,7 @@ func greetingPrefix(language string) (prefix string) {
 	return
 }
 
+// main function to test the Hello function
 func main() {
 	fmt.Println(Hello("Conner", "English"))
 	fmt.Println(Hello("Conner", "Spanish"))
